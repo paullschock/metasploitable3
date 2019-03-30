@@ -36,7 +36,7 @@
         "{{user `resources_dir`}}/certs/thawte_primary_root.cer",
         "{{user `resources_dir`}}/certs/utn-userfirst.cer"
       ],
-      "vm_name": "metasploitable3-win2k8",
+      "vm_name": "{{user `vm_name`}}",
       "vmx_data": {
         "cpuid.coresPerSocket": "2",
         "memsize": "4096",
@@ -58,7 +58,7 @@
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "guest_os_type": "Windows2008_64",
       "disk_size": 61440,
-      "vm_name": "metasploitable3-win2k8",
+      "vm_name": "{{user `vm_name`}}",
       "floppy_files": [
         "{{user `autounattend`}}",
         "{{user `scripts_dir`}}/configs/microsoft-updates.bat",
@@ -110,7 +110,7 @@
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "disk_size": 61440,
       "format": "qcow2",
-      "vm_name": "metasploitable3-win2k8",
+      "vm_name": "{{user `vm_name`}}",
       "floppy_files": [
         "{{user `autounattend`}}",
         "{{user `scripts_dir`}}/configs/microsoft-updates.bat",
@@ -298,6 +298,7 @@
   ],
   "variables": {
     "iso_url": "http://download.microsoft.com/download/7/5/E/75EC4E54-5B02-42D6-8879-D8D3A25FBEF7/7601.17514.101119-1850_x64fre_server_eval_en-us-GRMSXEVAL_EN_DVD.iso",
+    "vm_name": "metasploitable3-win2k8",
     "iso_checksum_type": "md5",
     "iso_checksum": "4263be2cf3c59177c45085c0a7bc6ca5",
     "autounattend": "{{template_dir}}/../answer_files/2008_r2/Autounattend.xml",
