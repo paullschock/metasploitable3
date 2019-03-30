@@ -2,6 +2,7 @@
   "builders": [
     {
       "type": "vmware-iso",
+      "output_directory":"output-{{build_type}}-{{user `vm_name`}}",
       "iso_url": "{{user `iso_url`}}",
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_checksum": "{{user `iso_checksum`}}",
@@ -46,6 +47,7 @@
     },
     {
       "type": "virtualbox-iso",
+      "output_directory":"output-{{build_type}}-{{user `vm_name`}}",
       "iso_url": "{{user `iso_url`}}",
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_checksum": "{{user `iso_checksum`}}",
@@ -97,6 +99,7 @@
     },
     {
       "type": "qemu",
+      "output_directory":"output-{{build_type}}-{{user `vm_name`}}",
       "iso_url": "{{user `iso_url`}}",
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_checksum": "{{user `iso_checksum`}}",
