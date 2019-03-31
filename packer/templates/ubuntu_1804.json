@@ -18,7 +18,7 @@
         " auto=true",
         " priority=critical",
         " initrd=/install/initrd.gz",
-        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
+        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed_1804.cfg",
         " -- ",
         "<enter>"
       ],
@@ -57,7 +57,7 @@
         " auto=true",
         " priority=critical",
         " initrd=/install/initrd.gz",
-        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
+        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed_1804.cfg",
         " -- ",
         "<enter>"
       ],
@@ -103,7 +103,7 @@
         " auto=true",
         " priority=critical",
         " initrd=/install/initrd.gz",
-        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
+        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed_1804.cfg",
         " -- ",
         "<enter>"
       ],
@@ -158,7 +158,7 @@
     "iso_checksum_type": "sha256",
     "iso_checksum": "a2cb36dc010d98ad9253ea5ad5a07fd6b409e3412c48f1860536970b073c98f5",
     "box_version": "0.1.12",
-    "headless": "true",
+    "headless": "false",
     "vm_name": "metasploitable3-ub1804"
   }
 }
